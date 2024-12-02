@@ -11,6 +11,7 @@ function MainSection({ title }) {
   const [loading, setLoading] = useState(false);
   const [videoData, setVideoData] = useState(null);
   const [downloadLink, setDownloadLink] = useState("");
+  const backendurl = import.meta.env.VITE_API_BACKEND_URL;
 
   const getYouTubeVideoId = (url) => {
     const regExp =
@@ -18,14 +19,13 @@ function MainSection({ title }) {
     const match = url.match(regExp);
     return match ? match[1] : null;
   };
-
   const handleSearch = async () => {
     if (!url) return alert("Please enter a video URL");
     setLoading(true);
 
     try {
       const VideoID = getYouTubeVideoId(url);
-      const response = await axios.get(`http://localhost:3000/getVideoInfo/${VideoID}`);
+      const response = await axios.get(`${backendurl}getVideoInfo/${VideoID}`);
       setVideoData(response.data);
     } catch (error) {
       console.error("Error fetching video data:", error);
@@ -44,12 +44,12 @@ function MainSection({ title }) {
 
       if (mediaType === "video") {
         const [format, resolution] = selectedVideoOption.split(" - ");
-        const endpoint = `http://localhost:3000/download/${VideoID}/${format.toLowerCase()}/${resolution}`;
+        const endpoint = `${backendurl}download/${VideoID}/${format.toLowerCase()}/${resolution}`;
         const response = await axios.get(endpoint, { responseType: "blob" });
         const urllink = window.URL.createObjectURL(response.data);
         setDownloadLink(urllink);
       } else {
-        const endpoint = `http://localhost:3000/downloadAudio/${VideoID}/${audioFormat}`;
+        const endpoint = `${backendurl}downloadAudio/${VideoID}/${audioFormat}`;
         const response = await axios.get(endpoint, { responseType: "blob" });
         const urllink = window.URL.createObjectURL(response.data);
         setDownloadLink(urllink);
