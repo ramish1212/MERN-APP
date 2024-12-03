@@ -5,8 +5,8 @@ import DownloadCard from "./DownloadCard";
 
 function MainSection({ title }) {
   const [url, setUrl] = useState("");
-  const [mediaType, setMediaType] = useState("video");
-  const [audioFormat, setAudioFormat] = useState("mp3");
+  const [mediaType, setMediaType] = useState("audio");
+  const [audioFormat, setAudioFormat] = useState("wav");
   const [selectedVideoOption, setSelectedVideoOption] = useState("MP4 - 1080p");
   const [loading, setLoading] = useState(false);
   const [videoData, setVideoData] = useState(null);
@@ -77,7 +77,7 @@ function MainSection({ title }) {
     "WEBM - 360p",
   ];
 
-  const audioFormats = ["mp3", "m4a", "aac", "flac", "opus", "ogg", "wav"];
+  const audioFormats = [ "wav", "mp3", "m4a", "aac", "flac", "opus", "ogg"];
 
   return (
     <div className="slideshow">

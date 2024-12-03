@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 :root{
   --base-color:#b00303;
@@ -11,7 +13,7 @@
   --dark-color:#000;
   --shadow-color:#d3d3d3;
   --white-tranparent-color:rgba(255, 255, 255, 0.5);
-  --blue-dark-color: #333a47;
+  --blue-dark-color: #e6db8b;
 }
 body.dark{
   --base-color:#e4a404;
@@ -19,7 +21,7 @@ body.dark{
   --dark-color:#fff;
   --shadow-color:#414141;
   --white-tranparent-color:rgba(0, 0, 0, 0.5);
-  --blue-dark-color: #ffffff;
+  --blue-dark-color: #ddd071;
 }
 ::placeholder{
   color: var(--light-color);
@@ -31,7 +33,8 @@ body.dark{
   margin-right: 10px;
   border-radius: 3px;
   padding: 10px;
-  color: var(--light-color);
+  color: #000;
+  font-weight: 500;
   cursor: pointer;
 }
 .btn-round{
@@ -150,6 +153,7 @@ nav.navbar button.btn-simple{
   margin-bottom: 10px;
   font-size: 40px;
   color: var(--dark-color);
+  font-family: "Viga", sans-serif;
 }
 .mainSearch .formatdiv select{
   border:none;
@@ -212,8 +216,17 @@ nav.navbar button.btn-simple{
 
 
 /* footer section  */
+.footer-logo2{
+  display: none;
+}
+body.dark .footer-logo1{
+  display: none;
+}
+body.dark .footer-logo2{
+  display: block;
+}
 .footer {
-  background-color: var(--blue-dark-color);
+  background-color: var(--light-color);
   padding: 70px 0px;
   margin-top: 50px;
 }
@@ -225,7 +238,7 @@ nav.navbar button.btn-simple{
 .links h3 {
   margin-bottom: 10px;
   font-size: 18px;
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 .links ul {
@@ -239,7 +252,7 @@ nav.navbar button.btn-simple{
 
 .links ul li a {
   text-decoration: none;
-  color: var(--light-color);
+  color: var(--dark-color);
   transition: color 0.3s;
 }
 
@@ -253,7 +266,7 @@ nav.navbar button.btn-simple{
   margin-top: 50px;
   font-size: 14px;
   text-align: center;
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 /* logo-slider section  */

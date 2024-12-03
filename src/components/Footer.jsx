@@ -11,7 +11,8 @@ function Footer() {
           <Row className='row-1'>
             <Col md={6}>
               <div className="logo">
-                <img src={mode === 'light' ? "/white-logo.png" : "/dark-logo.png"} alt="Logo" />
+                <img className='footer-logo1' src="/white-logo.png" alt="Logo" />
+                <img className='footer-logo2' src="/dark-logo.png" alt="Logo" />
               </div>
             </Col>
             <Col md={3}>
@@ -35,7 +36,7 @@ function Footer() {
             </Col>
           </Row>
           <div className="footer-bottom">
-            <p>&copy; 2022 All Rights Reserved.</p>
+            <p>&copy; 2024 All Rights Reserved.</p>
           </div>
         </Container>
       </Container>

@@ -29,9 +29,8 @@ function SearchBar({
       <div className="formatdiv">
         {/* Media Type Selector */}
         <select value={mediaType} onChange={(e) => setMediaType(e.target.value)}>
-          <option value="">Select Media Type</option>
           <option value="video">Video</option>
-          <option value="audio">Audio</option>
+          <option value="audio" selected>Audio</option>
         </select>
 
         {/* Format and Resolution Selector for Video */}
@@ -63,7 +62,7 @@ function SearchBar({
         )}
 
         <button className="btn-simple" onClick={handleSearch} disabled={loading}>
-          {loading ? "🔍 Searching..." : "🔍 Search"}
+          {loading ? "Downloading..." : "Download Now"}
         </button>
       </div>
     </div>

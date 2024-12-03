@@ -17,8 +17,8 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route path="/" element={<LayoutPages />}>
-            <Route path="/" element={<Home title={"YouTube to MP4 Converter"}/>} />
-            <Route path="youtube-to-wav-downloader" element={<Home title={"YouTube to WAV Downloader"}/>} />
+            <Route path="/" element={<Home title={"YouTube to WAV Downloader"}/>} />
+            <Route path="/youtube-to-mp4-converter" element={<Home title={"YouTube to MP4 Converter"}/>} />
             <Route path="youtube-to-aac" element={<Home title={"Youtube To AAC"}/>} />
             <Route path="youtube-to-flac" element={<Home title={"Youtube To FLAC"}/>} />
             <Route path="about-us" element={<About />} />

@@ -24,8 +24,8 @@ function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Link className='nav-link' to="/">YouTube to MP4 Converter</Link>
-                        <Link className='nav-link' to="/youtube-to-wav-downloader">YouTube to WAV Downloader</Link>
+                        <Link className='nav-link' to="/">YouTube to WAV Downloader</Link>
+                        <Link className='nav-link' to="/youtube-to-mp4-converter">YouTube to MP4 Converter</Link>
                         <Link className='nav-link' to="/youtube-to-aac">YouTube To AAC</Link>
                         <Link className='nav-link' to="/youtube-to-flac">YouTube To FLAC</Link>
                         <button className="btn-simple" onClick={handleMode}>
